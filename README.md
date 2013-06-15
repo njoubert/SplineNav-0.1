@@ -10,16 +10,16 @@ SplineNav.pde
 
 You will also need to make some minor changes elsewhere in the ArduCopter 3.0 code:
 
-1. Add a SplineNav #include and create a SplineNav object in UserCode.pde:
+-Add a SplineNav #include and create a SplineNav object in UserCode.pde:
 
-#include "SplineNav.h"
-SplineNav spline_nav;
+    #include "SplineNav.h"
+    SplineNav spline_nav;
 
-2. Remove the // comment from this line in APM_Config.h:
+-Remove the // comment from this line in APM_Config.h:
 
-#define USERHOOK_VARIABLES "UserVariables.h" 
+    #define USERHOOK_VARIABLES "UserVariables.h" 
 
-3. Since there's no SPLINE mode defined in ArduCopter, for now just for testing purposes you can commandeer CIRCLE mode instead. Change navigation.pde as follows:
+-Since there's no SPLINE mode defined in ArduCopter, for now just for testing purposes you can commandeer CIRCLE mode instead. Change navigation.pde as follows:
 
 In function set_nav_mode change the NAV_CIRCLE case:
 
